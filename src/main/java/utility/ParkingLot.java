@@ -10,21 +10,19 @@ public class ParkingLot {
     }
 
     HashSet<Car> parkedVehicles = new HashSet<>();
-    public void park(Car car){
-        if(parkedVehicles.isEmpty()){
-            new ParkingEmptyException();
-        }else if(!parkedVehicles.contains(car)){
+    public void park(Car car) throws CarIsParkedAlready, ParkingFullException {
+        if(!parkedVehicles.contains(car)){
             parkedVehicles.add(car);
         }else if(parkedVehicles.contains(car)){
-            new CarIsParkedAlready();
+            throw new CarIsParkedAlready();
         }else{
-            new ParkingFullException();
+            throw new ParkingFullException();
         }
     }
 
-    public void unPark(Car car){
+    public void unPark(Car car) throws CarNotParkedHere {
         if(!parkedVehicles.contains(car)){
-            new CarNotParkedHere();
+            throw new CarNotParkedHere();
         }else{
             parkedVehicles.remove(car);
         }
