@@ -8,6 +8,7 @@ import org.junit.jupiter.api.*;
 public class TestParkingLot {
     static Car car;
     static ParkingLot parkingLot;
+
     @BeforeAll
     static void initializingObjects(){
         car = new Car();
