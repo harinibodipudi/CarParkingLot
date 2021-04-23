@@ -27,4 +27,5 @@ public class TestParkingLot {
     void testToParkTheCarInParkingLot() {
         Assertions.assertDoesNotThrow(()->parkingLot.park(car));
     }
+
 }
