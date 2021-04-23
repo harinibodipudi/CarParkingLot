@@ -2,7 +2,8 @@ package utility;
 
 public class CarIsParkedAlready extends Exception{
 
-    public CarIsParkedAlready() {
+    CarIsParkedAlready() {
+
         super("Car is parked already");
     }
 }
