@@ -27,4 +27,11 @@ public class TestParkingLot {
     void testToParkTheCarInParkingLot() {
         Assertions.assertDoesNotThrow(()->parkingLot.park(car));
     }
+
+    @Test
+    @Order(3)
+    void testToUnParkCarFromTheParkingLot(){
+        Assertions.assertDoesNotThrow(()->parkingLot.unPark(car));
+    }
+
 }

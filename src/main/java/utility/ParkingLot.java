@@ -21,4 +21,12 @@ public class ParkingLot {
             new ParkingFullException();
         }
     }
+
+    public void unPark(Car car){
+        if(!parkedVehicles.contains(car)){
+            new CarNotParkedHere();
+        }else{
+            parkedVehicles.remove(car);
+        }
+    }
 }
